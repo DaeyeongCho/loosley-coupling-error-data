@@ -1,0 +1,19 @@
+| Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
+|----------|--------------|-----------------|------------|----------|-------------|--------|-----|
+| 1 | user | frontend | 2025-09-15 23:44:18.329 | 2025-09-15 23:44:19.262 | http: 500 | POST | http://127.0.0.1:8080/cart/checkout |
+| 2 | frontend | checkoutservice | 2025-09-15 23:44:18.384 | 2025-09-15 23:44:19.252 | grpc: 13 | POST | http://checkoutservice:5050/hipstershop.CheckoutService/PlaceOrder |
+| 3 | checkoutservice | cartservice | 2025-09-15 23:44:18.419 | 2025-09-15 23:44:19.118 | grpc: 0 | POST | http://cartservice:7070/hipstershop.CartService/GetCart |
+| 4 | checkoutservice | shippingservice | 2025-09-15 23:44:19.122 | 2025-09-15 23:44:19.144 | grpc: 0 | POST | http://shippingservice:50051/hipstershop.ShippingService/GetQuote |
+| 5 | checkoutservice | currencyservice | 2025-09-15 23:44:19.147 | 2025-09-15 23:44:19.194 | grpc: 0 | POST | http://currencyservice:7000/hipstershop.CurrencyService/Convert |
+| 6 | checkoutservice | paymentservice | 2025-09-15 23:44:19.198 | 2025-09-15 23:44:19.246 | grpc: 11 | POST | http://paymentservice:50051/hipstershop.PaymentService/Charge |
+
+
+
+
+
+
+요청
+
+curl.exe -X POST "http://127.0.0.1:8080/cart/checkout" `
+     -H "Content-Type: application/x-www-form-urlencoded" `
+     -d "email=example@example.com&street_address=123+Cloud+St&zip_code=94043&city=Mountain+View&state=CA&country=USA&credit_card_number=4111111111111111&credit_card_expiration_month=13&credit_card_expiration_year=2030&credit_card_cvv=123"

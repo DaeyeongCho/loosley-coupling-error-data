@@ -1,0 +1,11 @@
+| Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
+|----------|--------------|-----------------|------------|----------|-------------|--------|-----|
+| 1 | user | frontend | 2025-09-15 16:51:11.981 | 2025-09-15 16:51:12.758 | http: 500 | GET | http://127.0.0.1:8080/cart |
+| 2 | frontend | currencyservice | 2025-09-15 16:51:12.014 | 2025-09-15 16:51:12.041 | grpc: 0 | POST | http://currencyservice:7000/hipstershop.CurrencyService/GetSupportedCurrencies |
+| 3 | frontend | cartservice | 2025-09-15 16:51:12.044 | 2025-09-15 16:51:12.691 | grpc: 0 | POST | http://cartservice:7070/hipstershop.CartService/GetCart |
+| 4 | frontend | recommendationservice | 2025-09-15 16:51:12.695 | 2025-09-15 16:51:12.749 | grpc: 5 | POST | http://recommendationservice:8080/hipstershop.RecommendationService/ListRecommendations |
+| 5 | recommendationservice | productcatalogservice | 2025-09-15 16:51:12.726 | 2025-09-15 16:51:12.735 | grpc: 12 | POST | http://productcatalogservice:3550/hipstershop.ProductCatalogService/ListPro |
+
+
+
+recommendation 서비스에서 productcatalog 서비스로 /ListProducts 기능을 호출해야 하는데 /ListPro를 호출함

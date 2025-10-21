@@ -1,0 +1,5 @@
+| Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
+|----------|--------------|-----------------|------------|----------|-------------|--------|-----|
+| 1 | user | frontend | 2025-09-15 22:17:24.517 | 2025-09-15 22:17:30.729 | http: 500 | POST | http://127.0.0.1:8080/cart |
+| 2 | frontend | productcatalogservice | 2025-09-15 22:17:24.700 | 2025-09-15 22:17:24.798 | grpc: 0 | POST | http://productcatalogservice:3550/hipstershop.ProductCatalogService/GetProduct |
+| 3 | frontend | cartservice | 2025-09-15 22:17:24.806 | 2025-09-15 22:17:30.662 | grpc: 9 | POST | http://cartservice:7070/hipstershop.CartService/AddItem |

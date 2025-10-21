@@ -1,0 +1,7 @@
+| Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
+|----------|--------------|-----------------|------------|----------|-------------|--------|-----|
+| 1 | user | frontend | 2025-09-15 21:25:25.841 | 2025-09-15 21:25:26.248 | http: 500 | POST | http://127.0.0.1:8080/cart/checkout |
+| 2 | frontend | checkoutservice | 2025-09-15 21:25:25.863 | 2025-09-15 21:25:26.241 | grpc: 3 | POST | http://checkoutservice:5050/hipstershop.CheckoutService/PlaceOrder |
+
+
+frontend에서 checkout 서비스로 month, year 값에 대해서 int 타입으로 보냈는데 checkout 서비스에서는 스트링 타입을 원함

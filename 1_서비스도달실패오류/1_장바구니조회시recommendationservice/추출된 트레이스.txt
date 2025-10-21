@@ -1,0 +1,11 @@
+| Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
+|----------|--------------|-----------------|------------|----------|-------------|--------|-----|
+| 1 | user | frontend | 2025-09-15 15:09:59.830 | 2025-09-15 15:10:04.551 | http: 503 | GET | http://127.0.0.1:8080/cart |
+| 2 | frontend | currencyservice | 2025-09-15 15:09:59.893 | 2025-09-15 15:09:59.934 | grpc: 0 | POST | http://currencyservice:7000/hipstershop.CurrencyService/GetSupportedCurrencies |
+| 3 | frontend | cartservice | 2025-09-15 15:09:59.938 | 2025-09-15 15:10:00.838 | grpc: 0 | POST | http://cartservice:7070/hipstershop.CartService/GetCart |
+| 4 | frontend | recommendationservice | 2025-09-15 15:10:00.845 | 2025-09-15 15:10:04.522 | grpc: 14 | POST | http://recommendationservice:8080/hipstershop.RecommendationService/ListRecommendations |
+
+
+
+
+recommendation 서비스가 productcatalog 서비스로 요청을 보낼 때 yaml에 value: "productcatalogservice:3550"이어야 하는데 value: "productcatalogservices:3550"로 보내서 서비스를 찾지 못함

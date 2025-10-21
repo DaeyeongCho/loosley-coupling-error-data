@@ -1,0 +1,19 @@
+| Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
+|----------|--------------|-----------------|------------|----------|-------------|--------|-----|
+| 1 | user | frontend | 2025-09-15 22:50:48.131 | 2025-09-15 22:50:49.457 | http: 500 | POST | http://127.0.0.1:8080/cart/checkout |
+| 2 | frontend | checkoutservice | 2025-09-15 22:50:48.175 | 2025-09-15 22:50:49.423 | grpc: 14 | POST | http://checkoutservice:5050/hipstershop.CheckoutService/PlaceOrder |
+| 3 | checkoutservice | cartservice | 2025-09-15 22:50:48.200 | 2025-09-15 22:50:49.130 | grpc: 0 | POST | http://cartservice:7070/hipstershop.CartService/GetCart |
+| 4 | checkoutservice | shippingservice | 2025-09-15 22:50:49.158 | 2025-09-15 22:50:49.186 | grpc: 0 | POST | http://shippingservice:50051/hipstershop.ShippingService/GetQuote |
+| 5 | checkoutservice | currencyservice | 2025-09-15 22:50:49.188 | 2025-09-15 22:50:49.237 | grpc: 0 | POST | http://currencyservice:7000/hipstershop.CurrencyService/Convert |
+| 6 | checkoutservice | paymentservice | 2025-09-15 22:50:49.240 | 2025-09-15 22:50:49.298 | grpc: 0 | POST | http://paymentservice:50051/hipstershop.PaymentService/Charge |
+| 7 | checkoutservice | shippingservice | 2025-09-15 22:50:49.302 | 2025-09-15 22:50:49.308 | grpc: 2 | POST | http://shippingservice:50051/hipstershop.ShippingService/ShipOrder |
+| 8 | checkoutservice | cartservice | 2025-09-15 22:50:49.338 | 2025-09-15 22:50:49.360 | grpc: 0 | POST | http://cartservice:7070/hipstershop.CartService/GetCart |
+| 9 | checkoutservice | shippingservice | 2025-09-15 22:50:49.361 | 2025-09-15 22:50:49.364 | grpc: 0 | POST | http://shippingservice:50051/hipstershop.ShippingService/GetQuote |
+| 10 | checkoutservice | currencyservice | 2025-09-15 22:50:49.365 | 2025-09-15 22:50:49.369 | grpc: 0 | POST | http://currencyservice:7000/hipstershop.CurrencyService/Convert |
+| 11 | checkoutservice | paymentservice | 2025-09-15 22:50:49.369 | 2025-09-15 22:50:49.372 | grpc: 0 | POST | http://paymentservice:50051/hipstershop.PaymentService/Charge |
+| 12 | checkoutservice | shippingservice | 2025-09-15 22:50:49.373 | 2025-09-15 22:50:49.375 | grpc: 2 | POST | http://shippingservice:50051/hipstershop.ShippingService/ShipOrder |
+| 13 | checkoutservice | cartservice | 2025-09-15 22:50:49.404 | 2025-09-15 22:50:49.407 | grpc: 0 | POST | http://cartservice:7070/hipstershop.CartService/GetCart |
+| 14 | checkoutservice | shippingservice | 2025-09-15 22:50:49.407 | 2025-09-15 22:50:49.410 | grpc: 0 | POST | http://shippingservice:50051/hipstershop.ShippingService/GetQuote |
+| 15 | checkoutservice | currencyservice | 2025-09-15 22:50:49.410 | 2025-09-15 22:50:49.415 | grpc: 0 | POST | http://currencyservice:7000/hipstershop.CurrencyService/Convert |
+| 16 | checkoutservice | paymentservice | 2025-09-15 22:50:49.415 | 2025-09-15 22:50:49.419 | grpc: 0 | POST | http://paymentservice:50051/hipstershop.PaymentService/Charge |
+| 17 | checkoutservice | shippingservice | 2025-09-15 22:50:49.419 | 2025-09-15 22:50:49.421 | grpc: 2 | POST | http://shippingservice:50051/hipstershop.ShippingService/ShipOrder |
