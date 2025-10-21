@@ -105,7 +105,7 @@
 | 4 | frontend | recommendationservice | 2025-09-15 15:10:00.845 | 2025-09-15 15:10:04.522 | grpc: 14 | POST | http://recommendationservice:8080/hipstershop.RecommendationService/ListRecommendations |
 
 
-### 연결 지점 불일치 오류
+### 연결 지점 불일치 오류 - 장바구니 조회
 
 | Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
 |----------|--------------|-----------------|------------|----------|-------------|--------|-----|
@@ -115,14 +115,14 @@
 | 4 | frontend | recommendationservice | 2025-09-15 16:51:12.695 | 2025-09-15 16:51:12.749 | grpc: 5 | POST | http://recommendationservice:8080/hipstershop.RecommendationService/ListRecommendations |
 | 5 | recommendationservice | productcatalogservice | 2025-09-15 16:51:12.726 | 2025-09-15 16:51:12.735 | grpc: 12 | POST | http://productcatalogservice:3550/hipstershop.ProductCatalogService/ListPro |
 
-### 데이터 명세 불일치 오류
+### 데이터 명세 불일치 오류 - 장바구니 상품 결제 
 
 | Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
 |----------|--------------|-----------------|------------|----------|-------------|--------|-----|
 | 1 | user | frontend | 2025-09-15 21:25:25.841 | 2025-09-15 21:25:26.248 | http: 500 | POST | http://127.0.0.1:8080/cart/checkout |
 | 2 | frontend | checkoutservice | 2025-09-15 21:25:25.863 | 2025-09-15 21:25:26.241 | grpc: 3 | POST | http://checkoutservice:5050/hipstershop.CheckoutService/PlaceOrder |
 
-### 시간적 제약 위반 오류
+### 시간적 제약 위반 오류 - 홈 화면 조회
 
 | Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
 |----------|--------------|-----------------|------------|----------|-------------|--------|-----|
@@ -130,7 +130,7 @@
 | 2 | frontend | currencyservice | 2025-09-16 00:13:00.482 | 2025-09-16 00:13:00.523 | http: 0 | POST | http://currencyservice:7000/hipstershop.CurrencyService/GetSupportedCurrencies |
 | 3 | frontend | productcatalogservice | 2025-09-16 00:13:00.482 | 2025-09-16 00:13:00.515 | grpc: 0 | POST | http://productcatalogservice:3550/hipstershop.ProductCatalogService/ListProducts |
 
-### 상태 일관성 오류
+### 상태 일관성 오류 - 장바구니 상품 추가
 
 | Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
 |----------|--------------|-----------------|------------|----------|-------------|--------|-----|
@@ -138,7 +138,7 @@
 | 2 | frontend | productcatalogservice | 2025-09-15 22:17:24.700 | 2025-09-15 22:17:24.798 | grpc: 0 | POST | http://productcatalogservice:3550/hipstershop.ProductCatalogService/GetProduct |
 | 3 | frontend | cartservice | 2025-09-15 22:17:24.806 | 2025-09-15 22:17:30.662 | grpc: 9 | POST | http://cartservice:7070/hipstershop.CartService/AddItem |
 
-### 복합 기능 수행 오류
+### 복합 기능 수행 오류 - 장바구니 상품 결제
 
 | Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
 |----------|--------------|-----------------|------------|----------|-------------|--------|-----|
@@ -160,7 +160,7 @@
 | 16 | checkoutservice | paymentservice | 2025-09-15 22:50:49.415 | 2025-09-15 22:50:49.419 | grpc: 0 | POST | http://paymentservice:50051/hipstershop.PaymentService/Charge |
 | 17 | checkoutservice | shippingservice | 2025-09-15 22:50:49.419 | 2025-09-15 22:50:49.421 | grpc: 2 | POST | http://shippingservice:50051/hipstershop.ShippingService/ShipOrder |
 
-### 데이터 명세 불일치 오류
+### 데이터 명세 불일치 오류 - 장바구니 상품 결제
 
 | Sequence | Send Service | Receive Service | Start Time | End Time | Status Code | Method | URL |
 |----------|--------------|-----------------|------------|----------|-------------|--------|-----|
